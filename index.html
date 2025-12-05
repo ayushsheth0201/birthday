@@ -20,7 +20,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
       background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
       background-size: 400% 400%;
       animation: gradientShift 18s ease infinite;
@@ -306,7 +307,7 @@
       max-width: 620px;
       padding: 1.3rem 1.8rem;
       border-radius: 999px;
-      transform: translateY(2vh);   /* move up but not cut off */
+      transform: translateY(3vh);   /* move up but not cut off */
     }
 
     .card.compact .wish-state {
@@ -581,3 +582,4 @@
   </script>
 </body>
 </html>
+
