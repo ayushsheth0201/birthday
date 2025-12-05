@@ -412,34 +412,47 @@
 
     /* ----- RESPONSIVE ----- */
     @media (max-width: 480px) {
-      .card {
-        padding: 2.1rem 1.7rem 1.9rem;
-        border-radius: 1.7rem;
-      }
-
-      .tap-state h1 {
-        font-size: 1.75rem;
-      }
-
-      .wish-main-line {
-        font-size: 2.1rem;
-      }
-
-      .card.compact {
-        transform: translateY(-14vh);
-        padding: 1rem 1.3rem;
-      }
-
-      .card.compact .wish-main-line {
-        font-size: 1.5rem;
-      }
-
-      .photo-grid {
-        grid-template-columns: repeat(2, minmax(130px, 1fr));
-        gap: 1.3rem;
-        margin-top: 2.3rem;
-      }
+  /* Stop vertical centering on mobile */
+    .body {
+      align-items: flex-start;
+      justify-content: flex-start;
     }
+  
+    .wrapper {
+      padding-top: 3.5rem; /* pushes everything a bit down */
+    }
+  
+    .card {
+      padding: 2.1rem 1.7rem 1.9rem;
+      border-radius: 1.7rem;
+      margin: 0 auto;
+    }
+  
+    .tap-state h1 {
+      font-size: 1.75rem;
+    }
+  
+    .wish-main-line {
+      font-size: 2.1rem;
+    }
+  
+    /* On mobile: don't move the compact card up at all */
+    .card.compact {
+      transform: none;          /* <— removes upward shift */
+      padding: 1rem 1.3rem;
+    }
+  
+    .card.compact .wish-main-line {
+      font-size: 1.5rem;
+    }
+  
+    .photo-grid {
+      grid-template-columns: repeat(2, minmax(130px, 1fr));
+      gap: 1.3rem;
+      margin-top: 2.3rem;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -582,4 +595,5 @@
   </script>
 </body>
 </html>
+
 
